@@ -7,6 +7,8 @@ import { Music, Users, Calendar, AlertCircle } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { LoginForm } from "@/features/auth/components/LoginForm";
 import { RegisterForm } from "@/features/auth/components/RegisterForm";
+import { InventoryPage } from "./features/inventory/pages/InventoryPage";
+import { Toaster } from "@/components/ui/toaster";
 
 function Dashboard() {
   const stats = [
@@ -139,68 +141,83 @@ function App() {
   }
 
   return (
-    <Router>
-      <Routes>
-        {/* Public Routes */}
-        <Route 
-          path="/" 
-          element={
-            <>
-              <Navbar />
-              <LandingPage />
-            </>
-          } 
-        />
-        <Route 
-          path="/login" 
-          element={
-            user ? (
-              <Navigate to="/dashboard" replace />
-            ) : (
+    <>
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route 
+            path="/" 
+            element={
               <>
                 <Navbar />
-                <div className="flex items-center justify-center min-h-[calc(100vh-64px)] bg-muted/40 p-4">
-                  <LoginForm onSubmit={login} />
-                </div>
+                <LandingPage />
               </>
-            )
-          } 
-        />
-        <Route 
-          path="/register" 
-          element={
-            user ? (
-              <Navigate to="/dashboard" replace />
-            ) : (
-              <>
-                <Navbar />
-                <div className="flex items-center justify-center min-h-[calc(100vh-64px)] bg-muted/40 p-4">
-                  <RegisterForm onSubmit={register} />
-                </div>
-              </>
-            )
-          } 
-        />
+            } 
+          />
+          <Route 
+            path="/login" 
+            element={
+              user ? (
+                <Navigate to="/dashboard" replace />
+              ) : (
+                <>
+                  <Navbar />
+                  <div className="flex items-center justify-center min-h-[calc(100vh-64px)] bg-muted/40 p-4">
+                    <LoginForm onSubmit={login} />
+                  </div>
+                </>
+              )
+            } 
+          />
+          <Route 
+            path="/register" 
+            element={
+              user ? (
+                <Navigate to="/dashboard" replace />
+              ) : (
+                <>
+                  <Navbar />
+                  <div className="flex items-center justify-center min-h-[calc(100vh-64px)] bg-muted/40 p-4">
+                    <RegisterForm onSubmit={register} />
+                  </div>
+                </>
+              )
+            } 
+          />
 
-        {/* Private Routes */}
-        <Route 
-          path="/dashboard" 
-          element={
-            user ? (
-              <MainShell>
-                <Dashboard />
-              </MainShell>
-            ) : (
-              <Navigate to="/login" replace />
-            )
-          } 
-        />
+          {/* Private Routes */}
+          <Route 
+            path="/dashboard" 
+            element={
+              user ? (
+                <MainShell>
+                  <Dashboard />
+                </MainShell>
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            } 
+          />
+          
+          <Route 
+            path="/instruments" 
+            element={
+              user ? (
+                <MainShell>
+                  <InventoryPage />
+                </MainShell>
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            } 
+          />
 
-        {/* Redirect root if logged in to dashboard, but actually root is landing page */}
-        {/* So if user is logged in and goes to /, they still see landing page or redirect? */}
-        {/* Usually they still see landing page unless they click 'Go to Dashboard' */}
-      </Routes>
-    </Router>
+          {/* Fallback */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
+      <Toaster />
+    </>
   );
 }
 

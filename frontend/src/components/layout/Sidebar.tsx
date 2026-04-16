@@ -19,11 +19,13 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { useAuth } from "@/context/AuthContext"
+import { Link } from "react-router-dom"
 
 const items = [
   {
     title: "Dashboard",
-    url: "/",
+    url: "/dashboard",
     icon: Home,
   },
   {
@@ -49,15 +51,19 @@ const items = [
 ]
 
 export function AppSidebar() {
+  const { logout } = useAuth()
+
   return (
     <Sidebar variant="sidebar" collapsible="icon">
       <SidebarHeader className="flex items-center justify-center py-4">
-        <div className="flex items-center gap-2 px-2">
+        <Link to="/dashboard" className="flex items-center gap-2 px-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Music className="h-4 w-4" />
           </div>
-          <span className="font-semibold text-xl tracking-tight">Trovantina</span>
-        </div>
+          <span className="font-semibold text-xl tracking-tight group-data-[collapsible=icon]:hidden">
+            Trovantina
+          </span>
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
@@ -67,10 +73,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild tooltip={item.title}>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -81,7 +87,7 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton className="w-full justify-start gap-2">
+            <SidebarMenuButton className="w-full justify-start gap-2" onClick={logout}>
               <LogOut className="h-4 w-4" />
               <span>Log out</span>
             </SidebarMenuButton>
