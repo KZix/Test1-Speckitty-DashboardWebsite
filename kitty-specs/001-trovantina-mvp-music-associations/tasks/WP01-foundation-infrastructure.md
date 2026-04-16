@@ -1,25 +1,29 @@
 ---
-work_package_id: "WP01"
+work_package_id: WP01
+title: Foundation & Infrastructure
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: ecac82b69307f60eff76c3482b96e9178f4ddb2f
+created_at: '2026-04-16T17:33:54.360513+00:00'
 subtasks:
-  - "T001"
-  - "T002"
-  - "T003"
-  - "T004"
-  - "T005"
-title: "Foundation & Infrastructure"
-phase: "Phase 1 - Environment Setup"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T001
+- T002
+- T003
+- T004
+- T005
+phase: Phase 1 - Environment Setup
+assignee: ''
+agent: ''
+shell_pid: "20760"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP01 – Foundation & Infrastructure
