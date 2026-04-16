@@ -1,23 +1,27 @@
 ---
-work_package_id: "WP03"
+work_package_id: WP03
+title: Public Landing Page
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: 008de1cb9325f07c36f4e9d66df88500d17e5092
+created_at: '2026-04-16T19:13:45.501818+00:00'
 subtasks:
-  - "T010"
-  - "T011"
-  - "T012"
-title: "Public Landing Page"
-phase: "Phase 2 - Core Features"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T010
+- T011
+- T012
+phase: Phase 2 - Core Features
+assignee: ''
+agent: ''
+shell_pid: "23884"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP03 – Public Landing Page
