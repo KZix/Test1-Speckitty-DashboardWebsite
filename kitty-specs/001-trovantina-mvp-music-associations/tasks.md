@@ -94,10 +94,10 @@
 **Requirements Refs**: FR-INV-01, FR-INV-02
 
 ### Included Subtasks
-- [ ] T013 Inventory API: Implement GET /api/instruments with cursor pagination and filtering in `backend/app/Http/Controllers/InstrumentController.php`
-- [ ] T014 Inventory API: Implement POST/PUT/DELETE /api/instruments (Admin only)
-- [ ] T015 [P] Inventory Logic: Implement image upload and storage handling in `backend/app/Services/ImageService.php`
-- [ ] T016 Inventory Tests: 100% coverage for CRUD operations and middleware in `backend/tests/Feature/InstrumentTest.php`
+- [x] T013 Inventory API: Implement GET /api/instruments with cursor pagination and filtering in `backend/app/Http/Controllers/InstrumentController.php`
+- [x] T014 Inventory API: Implement POST/PUT/DELETE /api/instruments (Admin only)
+- [x] T015 [P] Inventory Logic: Implement image upload and storage handling in `backend/app/Services/ImageService.php`
+- [x] T016 Inventory Tests: 100% coverage for CRUD operations and middleware in `backend/tests/Feature/InstrumentTest.php`
 
 ### Implementation Notes
 - Use cursor pagination for performance as defined in `data-model.md`.
