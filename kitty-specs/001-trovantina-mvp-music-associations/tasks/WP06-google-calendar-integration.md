@@ -1,23 +1,27 @@
 ---
-work_package_id: "WP06"
+work_package_id: WP06
+title: Google Calendar Integration
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: 5ad912fcbe1b6df8fc426b14c2fb39174d0166d3
+created_at: '2026-04-16T23:53:04.821109+00:00'
 subtasks:
-  - "T020"
-  - "T021"
-  - "T022"
-title: "Google Calendar Integration"
-phase: "Phase 3 - Implementation"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T020
+- T021
+- T022
+phase: Phase 3 - Implementation
+assignee: ''
+agent: ''
+shell_pid: "25640"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP06 – Google Calendar Integration
