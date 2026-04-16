@@ -1,0 +1,57 @@
+openapi: 3.0.3
+info:
+  title: Trovantina API
+  description: REST API for Trovantina Music Association Management
+  version: 1.0.0
+paths:
+  /api/register:
+    post:
+      summary: Register a new user
+      responses:
+        '201':
+          description: User created
+  /api/login:
+    post:
+      summary: Authenticate user and return token
+      responses:
+        '200':
+          description: Success
+  /api/instruments:
+    get:
+      summary: List all instruments
+      responses:
+        '200':
+          description: List of instruments
+    post:
+      summary: Create a new instrument (Admin only)
+      responses:
+        '201':
+          description: Instrument created
+  /api/instruments/{id}:
+    put:
+      summary: Update instrument details (Admin only)
+      responses:
+        '200':
+          description: Instrument updated
+    delete:
+      summary: Delete instrument (Admin only)
+      responses:
+        '204':
+          description: No content
+  /api/calendar/events:
+    get:
+      summary: Fetch events from central Google Calendar
+      responses:
+        '200':
+          description: List of events
+  /api/attendance:
+    post:
+      summary: Mark attendance for an event (Admin only)
+      responses:
+        '201':
+          description: Attendance recorded
+    get:
+      summary: View attendance records
+      responses:
+        '200':
+          description: Attendance list

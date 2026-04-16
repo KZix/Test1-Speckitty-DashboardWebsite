@@ -1,0 +1,6 @@
+Source_ID,Type,Location,Description
+SRC-01,Documentation,https://laravel.com/docs/11.x/pagination#cursor-pagination,Official Laravel docs on high-performance cursor pagination
+SRC-02,Documentation,https://tanstack.com/query/latest/docs/framework/react/overview,Official TanStack Query documentation
+SRC-03,Technical Article,https://plainenglish.io/blog/infinite-scrolling-vs-pagination,Comparison of infinite scroll vs traditional pagination
+SRC-04,Documentation,https://ui.shadcn.com/,Official Shadcn UI documentation
+SRC-05,Documentation,https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates,Official guide for Optimistic Updates in React Query

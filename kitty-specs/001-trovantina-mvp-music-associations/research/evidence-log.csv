@@ -1,0 +1,6 @@
+Date,Source_ID,Finding,Rationale
+2026-04-16,SRC-01,Cursor pagination outperforms offset pagination for large datasets,O(1) vs O(N) database complexity
+2026-04-16,SRC-02,TanStack Query is the industry standard for React server state,Built-in support for infinite queries and caching
+2026-04-16,SRC-03,Virtualization is mandatory for lists > 100 items,Prevents DOM bloat and UI lag
+2026-04-16,SRC-04,Shadcn UI provides superior accessibility via Radix primitives,Ensures WAI-ARIA compliance for the dashboard
+2026-04-16,SRC-05,Optimistic updates require temporary IDs and manual cache rollback,Essential for a seamless UX in Calendar/Inventory
