@@ -1,7 +1,7 @@
 ---
 work_package_id: WP01
 title: Foundation & Infrastructure
-lane: "doing"
+lane: "for_review"
 dependencies: []
 base_branch: main
 base_commit: ecac82b69307f60eff76c3482b96e9178f4ddb2f
@@ -145,3 +145,4 @@ history:
 
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
 - 2026-04-16T17:33:55Z – Gemini – shell_pid=20760 – lane=doing – Assigned agent via workflow command
+- 2026-04-16T19:26:51Z – Gemini – shell_pid=20760 – lane=for_review – Foundation & Infrastructure implementation completed. Retrying move to for_review.
