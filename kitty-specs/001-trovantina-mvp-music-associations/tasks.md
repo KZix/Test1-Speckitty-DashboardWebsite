@@ -70,9 +70,9 @@
 **Requirements Refs**: FR-LAND-01, FR-LAND-02
 
 ### Included Subtasks
-- [ ] T010 Landing Page: Design and implement Hero and "About Us" sections in `frontend/src/pages/LandingPage.tsx`
-- [ ] T011 Landing Page: Implement responsive Navbar with Auth links in `frontend/src/components/layout/Navbar.tsx`
-- [ ] T012 [P] Performance: Optimize Landing Page assets and ensure Lighthouse > 90
+- [x] T010 Landing Page: Design and implement Hero and "About Us" sections in `frontend/src/pages/LandingPage.tsx`
+- [x] T011 Landing Page: Implement responsive Navbar with Auth links in `frontend/src/components/layout/Navbar.tsx`
+- [x] T012 [P] Performance: Optimize Landing Page assets and ensure Lighthouse > 90
 
 ### Implementation Notes
 - Focus on responsive design and fast loading times.
