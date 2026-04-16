@@ -13,7 +13,7 @@ subtasks:
 - T016
 phase: Phase 2 - Core Features
 assignee: ''
-agent: ''
+agent: "Gemini"
 shell_pid: "9232"
 review_status: ''
 reviewed_by: ''
@@ -139,3 +139,4 @@ history:
 ## Activity Log
 
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
+- 2026-04-16T19:27:02Z – Gemini – shell_pid=9232 – lane=doing – Assigned agent via workflow command
