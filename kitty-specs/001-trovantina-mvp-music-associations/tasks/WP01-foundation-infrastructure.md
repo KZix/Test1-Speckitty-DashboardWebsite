@@ -14,7 +14,7 @@ subtasks:
 - T005
 phase: Phase 1 - Environment Setup
 assignee: ''
-agent: ''
+agent: "Gemini"
 shell_pid: "20760"
 review_status: ''
 reviewed_by: ''
@@ -144,3 +144,4 @@ history:
 ## Activity Log
 
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
+- 2026-04-16T17:33:55Z – Gemini – shell_pid=20760 – lane=doing – Assigned agent via workflow command
