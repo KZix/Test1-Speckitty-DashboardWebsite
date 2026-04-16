@@ -1,23 +1,27 @@
 ---
-work_package_id: "WP05"
+work_package_id: WP05
+title: Instrument Inventory (Frontend)
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: d1381a84409f112d85fc7e7edfc04030c4a0c7a4
+created_at: '2026-04-16T19:35:52.260106+00:00'
 subtasks:
-  - "T017"
-  - "T018"
-  - "T019"
-title: "Instrument Inventory (Frontend)"
-phase: "Phase 3 - Implementation"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T017
+- T018
+- T019
+phase: Phase 3 - Implementation
+assignee: ''
+agent: ''
+shell_pid: "3756"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP05 – Instrument Inventory (Frontend)
