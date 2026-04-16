@@ -119,9 +119,9 @@
 **Requirements Refs**: FR-INV-02, FR-INV-03
 
 ### Included Subtasks
-- [ ] T017 Inventory UI: Build Data Table for instrument listing with infinite scroll in `frontend/src/features/inventory/InventoryList.tsx`
-- [ ] T018 Inventory UI: Implement Create/Edit/Delete modals (Admin only) in `frontend/src/features/inventory/InstrumentForm.tsx`
-- [ ] T019 [P] Inventory UI: Implement assignment and status changes in `frontend/src/features/inventory/AssignmentAction.tsx`
+- [x] T017 Inventory UI: Build Data Table for instrument listing with infinite scroll in `frontend/src/features/inventory/InventoryList.tsx`
+- [x] T018 Inventory UI: Implement Create/Edit/Delete modals (Admin only) in `frontend/src/features/inventory/InstrumentForm.tsx`
+- [x] T019 [P] Inventory UI: Implement assignment and status changes in `frontend/src/features/inventory/AssignmentAction.tsx`
 
 ### Implementation Notes
 - Use React Query for infinite scrolling and optimistic updates.
