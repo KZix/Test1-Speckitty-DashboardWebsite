@@ -17,11 +17,11 @@
 - FR-DASH-01
 
 ### Included Subtasks
-- [ ] T001 Configure Laravel PostgreSQL connection and base migrations (Users, Instruments, Attendances)
-- [ ] T002 Set up Laravel Sanctum for API authentication
-- [ ] T003 [P] Initialize React project with Vite, TypeScript, Tailwind, and Shadcn UI
-- [ ] T004 [P] Set up API Client (Axios) and Server State Management (React Query)
-- [ ] T005 Create base Layout Components (Shell, Sidebar, Header)
+- [x] T001 Configure Laravel PostgreSQL connection and base migrations (Users, Instruments, Attendances)
+- [x] T002 Set up Laravel Sanctum for API authentication
+- [x] T003 [P] Initialize React project with Vite, TypeScript, Tailwind, and Shadcn UI
+- [x] T004 [P] Set up API Client (Axios) and Server State Management (React Query)
+- [x] T005 Create base Layout Components (Shell, Sidebar, Header)
 
 ### Implementation Notes
 - Initialize backend in `backend/` and frontend in `frontend/`.
