@@ -1,24 +1,28 @@
 ---
-work_package_id: "WP04"
+work_package_id: WP04
+title: Instrument Inventory (Backend)
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: f7f11baa6d4312d5726666cc4d3bc40c1cf29708
+created_at: '2026-04-16T19:27:01.708057+00:00'
 subtasks:
-  - "T013"
-  - "T014"
-  - "T015"
-  - "T016"
-title: "Instrument Inventory (Backend)"
-phase: "Phase 2 - Core Features"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T013
+- T014
+- T015
+- T016
+phase: Phase 2 - Core Features
+assignee: ''
+agent: ''
+shell_pid: "9232"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP04 – Instrument Inventory (Backend)
