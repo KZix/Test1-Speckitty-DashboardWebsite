@@ -1,8 +1,59 @@
 import { MainShell } from "./components/layout/MainShell"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Music, Users, Calendar, AlertCircle } from "lucide-react"
+import { useAuth } from "@/context/AuthContext"
+import { LoginForm } from "@/features/auth/components/LoginForm"
+import { RegisterForm } from "@/features/auth/components/RegisterForm"
+import { useState } from "react"
 
 function App() {
+  const { user, isLoading, login, register } = useAuth()
+  const [isRegistering, setIsRegistering] = useState(false)
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
+
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-muted/40 p-4">
+        <div className="w-full max-w-md space-y-4">
+          {isRegistering ? (
+            <>
+              <RegisterForm onSubmit={register} />
+              <p className="text-center text-sm">
+                Already have an account?{" "}
+                <button
+                  onClick={() => setIsRegistering(false)}
+                  className="text-primary hover:underline font-medium"
+                >
+                  Login
+                </button>
+              </p>
+            </>
+          ) : (
+            <>
+              <LoginForm onSubmit={login} />
+              <p className="text-center text-sm">
+                Don't have an account?{" "}
+                <button
+                  onClick={() => setIsRegistering(true)}
+                  className="text-primary hover:underline font-medium"
+                >
+                  Register
+                </button>
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+    )
+  }
+
   const stats = [
     {
       title: "Total Instruments",
