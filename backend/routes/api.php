@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\InstrumentController;
+
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -12,4 +14,14 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user();
     });
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    // Instrument Routes
+    Route::get('/instruments', [InstrumentController::class, 'index']);
+    Route::get('/instruments/{instrument}', [InstrumentController::class, 'show']);
+
+    Route::middleware('admin')->group(function () {
+        Route::post('/instruments', [InstrumentController::class, 'store']);
+        Route::match(['put', 'patch'], '/instruments/{instrument}', [InstrumentController::class, 'update']);
+        Route::delete('/instruments/{instrument}', [InstrumentController::class, 'destroy']);
+    });
 });
