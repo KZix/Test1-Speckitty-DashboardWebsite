@@ -2,7 +2,9 @@
 work_package_id: WP04
 title: Validation & Polish
 lane: planned
-dependencies: []
+dependencies:
+- WP02
+- WP03
 subtasks: [T013, T014, T015]
 requirement_refs:
 - FR-001

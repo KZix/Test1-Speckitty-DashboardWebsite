@@ -2,7 +2,8 @@
 work_package_id: WP03
 title: Frontend Containerization (React/Vite)
 lane: planned
-dependencies: []
+dependencies:
+- WP01
 subtasks: [T009, T010, T011, T012]
 requirement_refs:
 - FR-002

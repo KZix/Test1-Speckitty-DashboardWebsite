@@ -2,7 +2,8 @@
 work_package_id: WP02
 title: Backend Containerization (Laravel)
 lane: planned
-dependencies: []
+dependencies:
+- WP01
 subtasks: [T005, T006, T007, T008]
 requirement_refs:
 - FR-001
