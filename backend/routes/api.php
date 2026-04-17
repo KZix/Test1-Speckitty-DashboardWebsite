@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstrumentController;
 
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\AttendanceController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -19,6 +20,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Calendar Routes
     Route::get('/calendar/events', [CalendarController::class, 'index']);
+
+    // Attendance Routes
+    Route::get('/attendance', [AttendanceController::class, 'index']);
+    Route::middleware('admin')->post('/attendance', [AttendanceController::class, 'store']);
 
     // Instrument Routes
     Route::get('/instruments', [InstrumentController::class, 'index']);

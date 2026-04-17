@@ -9,6 +9,7 @@ import { LoginForm } from "@/features/auth/components/LoginForm";
 import { RegisterForm } from "@/features/auth/components/RegisterForm";
 import { InventoryPage } from "./features/inventory/pages/InventoryPage";
 import { CalendarPage } from "./features/calendar/pages/CalendarPage";
+import { AttendancePage } from "./features/attendance/pages/AttendancePage";
 import { Toaster } from "@/components/ui/toaster";
 
 function Dashboard() {
@@ -219,6 +220,19 @@ function App() {
               user ? (
                 <MainShell>
                   <CalendarPage />
+                </MainShell>
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            } 
+          />
+
+          <Route 
+            path="/attendance" 
+            element={
+              user ? (
+                <MainShell>
+                  <AttendancePage />
                 </MainShell>
               ) : (
                 <Navigate to="/login" replace />
