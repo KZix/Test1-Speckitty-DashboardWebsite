@@ -1,7 +1,7 @@
 ---
 work_package_id: WP03
 title: Public Landing Page
-lane: "for_review"
+lane: "doing"
 dependencies: []
 base_branch: main
 base_commit: 008de1cb9325f07c36f4e9d66df88500d17e5092
@@ -13,7 +13,7 @@ subtasks:
 phase: Phase 2 - Core Features
 assignee: ''
 agent: "Gemini"
-shell_pid: "23884"
+shell_pid: "30196"
 review_status: ''
 reviewed_by: ''
 history:
@@ -117,3 +117,4 @@ history:
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
 - 2026-04-16T19:13:46Z – Gemini – shell_pid=23884 – lane=doing – Assigned agent via workflow command
 - 2026-04-16T19:19:47Z – Gemini – shell_pid=23884 – lane=for_review – Public Landing Page implemented with Hero and About Us sections. Responsive Navbar added with Auth links. Integrated react-router-dom for navigation.
+- 2026-04-17T10:08:10Z – Gemini – shell_pid=30196 – lane=doing – Started review via workflow command
