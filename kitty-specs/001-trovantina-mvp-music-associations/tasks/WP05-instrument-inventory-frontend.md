@@ -1,7 +1,7 @@
 ---
 work_package_id: WP05
 title: Instrument Inventory (Frontend)
-lane: "for_review"
+lane: "doing"
 dependencies: []
 base_branch: main
 base_commit: d1381a84409f112d85fc7e7edfc04030c4a0c7a4
@@ -13,7 +13,7 @@ subtasks:
 phase: Phase 3 - Implementation
 assignee: ''
 agent: "Gemini"
-shell_pid: "3756"
+shell_pid: "19096"
 review_status: ''
 reviewed_by: ''
 history:
@@ -119,3 +119,4 @@ history:
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
 - 2026-04-16T19:35:53Z – Gemini – shell_pid=3756 – lane=doing – Assigned agent via workflow command
 - 2026-04-16T19:53:35Z – Gemini – shell_pid=3756 – lane=for_review – Instrument Inventory Frontend implemented with infinite scroll, CRUD dialogs for Admins, and optimistic updates for status changes.
+- 2026-04-17T10:15:24Z – Gemini – shell_pid=19096 – lane=doing – Started review via workflow command
