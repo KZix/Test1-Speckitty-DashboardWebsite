@@ -40,6 +40,26 @@ services:
     networks:
       - trovantina-network
 
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: trovantina-app
+    restart: unless-stopped
+    env_file:
+      - .env.docker
+    volumes:
+      - ./backend:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - trovantina-network
+
 networks:
   trovantina-network:
     driver: bridge
