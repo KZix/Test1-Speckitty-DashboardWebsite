@@ -1,15 +1,19 @@
 ---
 work_package_id: WP04
 title: Validation & Polish
-lane: planned
+lane: "doing"
 dependencies:
 - WP02
 - WP03
+base_branch: 002-docker-containerization-trovantina-mvp-WP04-merge-base
+base_commit: 5922de92050fd3a47a1f4c6b229e8838f20c6981
+created_at: '2026-04-17T20:10:04.030451+00:00'
 subtasks: [T013, T014, T015]
 requirement_refs:
 - FR-001
 - FR-002
 - FR-003
+shell_pid: "33712"
 ---
 
 # Work Package: WP04 – Validation & Polish
