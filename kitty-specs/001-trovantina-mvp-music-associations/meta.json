@@ -1,11 +1,29 @@
 {
+  "accept_commit": null,
+  "acceptance_history": [
+    {
+      "accepted_at": "2026-04-17T11:24:47Z",
+      "accepted_by": "gemini",
+      "accepted_from_commit": "53b6294597d0a6393cfa77773df7afb193be61e3",
+      "branch": "main",
+      "mode": "pr",
+      "validation_commands": [
+        "php artisan test",
+        "npm run build"
+      ]
+    }
+  ],
+  "acceptance_mode": "pr",
+  "accepted_at": "2026-04-17T11:24:47Z",
+  "accepted_by": "gemini",
+  "accepted_from_commit": "53b6294597d0a6393cfa77773df7afb193be61e3",
+  "created_at": "2026-04-16T16:24:13.213129+00:00",
   "feature_number": "001",
-  "slug": "001-trovantina-mvp-music-associations",
   "feature_slug": "001-trovantina-mvp-music-associations",
   "friendly_name": "trovantina mvp music associations",
   "mission": "software-dev",
+  "slug": "001-trovantina-mvp-music-associations",
   "target_branch": "main",
-  "created_at": "2026-04-16T16:24:13.213129+00:00",
   "vcs": "git",
   "vcs_locked_at": "2026-04-16T17:33:53.930664+00:00"
 }
