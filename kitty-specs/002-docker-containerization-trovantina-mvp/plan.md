@@ -1,108 +1,65 @@
-# Implementation Plan: [FEATURE]
-*Path: [templates/plan-template.md](templates/plan-template.md)*
+# Implementation Plan: Docker Containerization for Trovantina MVP
 
-
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/kitty-specs/[###-feature-name]/spec.md`
-
-**Note**: This template is filled in by the `/spec-kitty.plan` command. See `src/specify_cli/missions/software-dev/command-templates/plan.md` for the execution workflow.
-
-The planner will not begin until all planning questions have been answered—capture those answers in this document before progressing to later phases.
+**Branch**: `main` | **Date**: 2026-04-17 | **Spec**: [spec.md](spec.md)
+**Input**: Feature specification from `kitty-specs/002-docker-containerization-trovantina-mvp/spec.md`
 
 ## Summary
-
-[Extract from feature spec: primary requirement + technical approach from research]
+Implement a multi-container Docker orchestration setup to provide a consistent, one-command local development environment. The approach uses Docker Compose to manage a PHP 8.3 Laravel backend and a Node 20 React+Vite frontend, integrated with PostgreSQL, Redis, and Mailpit. Bind mounts will be used to ensure hot-reloading and seamless code synchronization during development.
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: PHP 8.3 (Backend), Node 20 (Frontend)
+**Primary Dependencies**: Docker, Docker Compose (v2.0+), Laravel 11, React (Vite)
+**Storage**: PostgreSQL 16 (Persistence via Docker volumes), Redis (Alpine)
+**Testing**: Playwright (E2E), PHPUnit (Unit/Feature)
+**Target Platform**: Docker-ready development machines (Linux/macOS/Windows)
+**Project Type**: Web application (Frontend + Backend)
+**Performance Goals**: Container startup and service readiness < 10 seconds.
+**Constraints**: Support for HMR (Hot Module Replacement) across the container boundary.
+**Scale/Scope**: Local development environment orchestration for 5 services.
 
 ## Constitution Check
-
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
-
-[Gates determined based on constitution file]
+*Skipped: No constitution.md found in .kittify/memory/.*
 
 ## Project Structure
 
 ### Documentation (this feature)
 
 ```
-kitty-specs/[###-feature]/
-├── plan.md              # This file (/spec-kitty.plan command output)
-├── research.md          # Phase 0 output (/spec-kitty.plan command)
-├── data-model.md        # Phase 1 output (/spec-kitty.plan command)
-├── quickstart.md        # Phase 1 output (/spec-kitty.plan command)
-├── contracts/           # Phase 1 output (/spec-kitty.plan command)
-└── tasks.md             # Phase 2 output (/spec-kitty.tasks command - NOT created by /spec-kitty.plan)
+kitty-specs/002-docker-containerization-trovantina-mvp/
+├── plan.md              # This file
+├── research.md          # Phase 0 output
+├── data-model.md        # Phase 1 output (Service mapping)
+├── quickstart.md        # Phase 1 output (Docker-specific steps)
+├── contracts/           # Phase 1 output (Internal networking definitions)
+└── tasks/               # Phase 2 output (Work packages)
 ```
 
 ### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
 
 ```
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
-
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
 backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
+├── Dockerfile           # Backend container definition
+└── ...
 
 frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
+├── Dockerfile           # Frontend container definition
+└── ...
 
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+docker-compose.yml       # Orchestration file
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+**Structure Decision**: Standard web application layout with service-specific Dockerfiles in their respective directories and a central `docker-compose.yml` in the root.
 
 ## Complexity Tracking
+*No violations detected.*
 
-*Fill ONLY if Constitution Check has violations that must be justified*
+## Phase 0: Outline & Research
+- **Task**: Find best practices for Laravel 11 Dockerization.
+- **Task**: Research Vite HMR configuration within Docker containers.
+- **Task**: Determine optimal PostgreSQL and Redis Alpine configurations for dev.
 
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+## Phase 1: Design & Contracts
+- **Data Model**: Mapping of services, ports, volumes, and environment variables.
+- **Contracts**: Internal network aliases and service discovery rules.
+- **Quickstart**: Detailed steps for `docker-compose up` and initial seed.
