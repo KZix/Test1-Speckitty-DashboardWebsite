@@ -1,11 +1,15 @@
 ---
 work_package_id: WP01
 title: Foundation & Orchestration
-lane: planned
+lane: "doing"
 dependencies: []
+base_branch: main
+base_commit: c9e7112718565f5e6688f7ae04b8035a1bc9a5d6
+created_at: '2026-04-17T14:29:04.799629+00:00'
 subtasks: [T001, T002, T003, T004]
 requirement_refs:
 - FR-003
+shell_pid: "34812"
 ---
 
 # Work Package: WP01 – Foundation & Orchestration
