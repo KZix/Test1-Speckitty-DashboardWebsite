@@ -1,23 +1,27 @@
 ---
-work_package_id: "WP08"
+work_package_id: WP08
+title: Final Polish & E2E Testing
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: 457934f4fe2ae83f6e425092eb3ef7976b518412
+created_at: '2026-04-17T08:11:58.007575+00:00'
 subtasks:
-  - "T026"
-  - "T027"
-  - "T028"
-title: "Final Polish & E2E Testing"
-phase: "Phase 4 - Review & Finalization"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T026
+- T027
+- T028
+phase: Phase 4 - Review & Finalization
+assignee: ''
+agent: ''
+shell_pid: "30668"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP08 – Final Polish & E2E Testing
