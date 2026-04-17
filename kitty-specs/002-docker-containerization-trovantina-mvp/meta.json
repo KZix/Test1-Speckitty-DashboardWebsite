@@ -1,0 +1,9 @@
+{
+  "feature_number": "002",
+  "slug": "002-docker-containerization-trovantina-mvp",
+  "feature_slug": "002-docker-containerization-trovantina-mvp",
+  "friendly_name": "docker containerization trovantina mvp",
+  "mission": "software-dev",
+  "target_branch": "main",
+  "created_at": "2026-04-17T11:28:51.086785+00:00"
+}
