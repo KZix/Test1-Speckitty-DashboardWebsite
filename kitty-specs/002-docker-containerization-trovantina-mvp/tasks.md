@@ -33,10 +33,10 @@ This document outlines the phased implementation of the Docker orchestration set
 - **Depends on WP01**
 
 **Subtasks**:
-- [ ] T005: Create backend/Dockerfile using PHP 8.3 Apache or FPM.
-- [ ] T006: Create backend/docker-entrypoint.sh for automation (migrations, storage link).
-- [ ] T007: Add app service to docker-compose.yml with bind mounts.
-- [ ] T008: Verify backend connectivity to orchestrated db and redis.
+- [x] T005: Create backend/Dockerfile using PHP 8.3 Apache or FPM.
+- [x] T006: Create backend/docker-entrypoint.sh for automation (migrations, storage link).
+- [x] T007: Add app service to docker-compose.yml with bind mounts.
+- [x] T008: Verify backend connectivity to orchestrated db and redis.
 
 ---
 
