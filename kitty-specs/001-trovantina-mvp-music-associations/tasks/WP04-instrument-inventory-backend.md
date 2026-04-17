@@ -1,7 +1,7 @@
 ---
 work_package_id: WP04
 title: Instrument Inventory (Backend)
-lane: "for_review"
+lane: "doing"
 dependencies: []
 base_branch: main
 base_commit: f7f11baa6d4312d5726666cc4d3bc40c1cf29708
@@ -14,7 +14,7 @@ subtasks:
 phase: Phase 2 - Core Features
 assignee: ''
 agent: "Gemini"
-shell_pid: "9232"
+shell_pid: "8220"
 review_status: ''
 reviewed_by: ''
 history:
@@ -141,3 +141,4 @@ history:
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
 - 2026-04-16T19:27:02Z – Gemini – shell_pid=9232 – lane=doing – Assigned agent via workflow command
 - 2026-04-16T19:33:06Z – Gemini – shell_pid=9232 – lane=for_review – Instrument Inventory Backend implemented with CRUD operations, cursor pagination, image upload service, and Admin middleware. 100% test coverage achieved with Feature tests.
+- 2026-04-17T10:12:26Z – Gemini – shell_pid=8220 – lane=doing – Started review via workflow command
