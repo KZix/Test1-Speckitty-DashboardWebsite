@@ -11,15 +11,15 @@ This document outlines the phased implementation of the Docker orchestration set
 - **Requirement Refs**: FR-003
 
 **Subtasks**:
-- [ ] **T001**: Create shared Docker network and volumes (db_data, redis_data). `[P]`
-- [ ] **T002**: Create root `docker-compose.yml` with `db`, `redis`, and `mail` definitions.
-- [ ] **T003**: Configure persistent volume mapping and health checks for `db`.
-- [ ] **T004**: Implement `.env.docker` template for container-specific environment variables.
+- [x] T001: Create shared Docker network and volumes (db_data, redis_data). [P]
+- [x] T002: Create root docker-compose.yml with db, redis, and mail definitions.
+- [x] T003: Configure persistent volume mapping and health checks for db.
+- [x] T004: Implement .env.docker template for container-specific environment variables.
 
 **Implementation Sketch**:
-1. Define `trovantina-network` in `docker-compose.yml`.
-2. Map `db_data` to `/var/lib/postgresql/data`.
-3. Add `axllent/mailpit` for local mail capture.
+1. Define trovina-network in docker-compose.yml.
+2. Map db_data to /var/lib/postgresql/data.
+3. Add axllent/mailpit for local mail capture.
 
 ---
 
@@ -33,25 +33,25 @@ This document outlines the phased implementation of the Docker orchestration set
 - **Depends on WP01**
 
 **Subtasks**:
-- [ ] **T005**: Create `backend/Dockerfile` using PHP 8.3 Apache or FPM.
-- [ ] **T006**: Create `backend/docker-entrypoint.sh` for automation (migrations, storage link).
-- [ ] **T007**: Add `app` service to `docker-compose.yml` with bind mounts.
-- [ ] **T008**: Verify backend connectivity to orchestrated `db` and `redis`.
+- [ ] T005: Create backend/Dockerfile using PHP 8.3 Apache or FPM.
+- [ ] T006: Create backend/docker-entrypoint.sh for automation (migrations, storage link).
+- [ ] T007: Add app service to docker-compose.yml with bind mounts.
+- [ ] T008: Verify backend connectivity to orchestrated db and redis.
 
 ---
 
 ### WP03: Frontend Containerization (React/Vite)
 - **Goal**: Create and integrate the Node 20 environment for the React dashboard.
 - **Priority**: Medium
-- **Independent Test**: Frontend is reachable at `localhost:5173` with HMR active.
+- **Independent Test**: Frontend is reachable at localhost:5173 with HMR active.
 - **Requirement Refs**: FR-002
 - **Depends on WP01**
 
 **Subtasks**:
-- [ ] **T009**: Create `frontend/Dockerfile` using Node 20.
-- [ ] **T010**: Configure `vite.config.ts` for Docker (polling and host binding).
-- [ ] **T011**: Add `web` service to `docker-compose.yml` with port 5173 exposed.
-- [ ] **T012**: Verify API communication between `web` and `app` containers.
+- [ ] T009: Create frontend/Dockerfile using Node 20.
+- [ ] T010: Configure vite.config.ts for Docker (polling and host binding).
+- [ ] T011: Add web service to docker-compose.yml with port 5173 exposed.
+- [ ] T012: Verify API communication between web and app containers.
 
 ---
 
@@ -60,11 +60,11 @@ This document outlines the phased implementation of the Docker orchestration set
 ### WP04: Validation & Polish
 - **Goal**: Ensure the environment is robust, documented, and easy to use.
 - **Priority**: Low
-- **Independent Test**: Fresh clone + `docker-compose up` results in working app.
+- **Independent Test**: Fresh clone + docker-compose up results in working app.
 - **Requirement Refs**: FR-001, FR-002, FR-003
 - **Depends on WP02, WP03**
 
 **Subtasks**:
-- [ ] **T013**: Update `quickstart.md` with final Docker commands.
-- [ ] **T014**: Verify data persistence after `docker-compose down -v`.
-- [ ] **T015**: Optimize Docker build layers and clean up untracked files.
+- [ ] T013: Update quickstart.md with final Docker commands.
+- [ ] T014: Verify data persistence after docker-compose down -v.
+- [ ] T015: Optimize Docker build layers and clean up untracked files.
