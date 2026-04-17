@@ -1,7 +1,7 @@
 ---
 work_package_id: WP06
 title: Google Calendar Integration
-lane: "for_review"
+lane: "doing"
 dependencies: []
 base_branch: main
 base_commit: 5ad912fcbe1b6df8fc426b14c2fb39174d0166d3
@@ -13,7 +13,7 @@ subtasks:
 phase: Phase 3 - Implementation
 assignee: ''
 agent: "Gemini"
-shell_pid: "25640"
+shell_pid: "32288"
 review_status: ''
 reviewed_by: ''
 history:
@@ -118,3 +118,4 @@ history:
 - 2026-04-16T16:40:06Z – system – lane=planned – Prompt generated via /spec-kitty.tasks
 - 2026-04-16T23:53:05Z – Gemini – shell_pid=25640 – lane=doing – Assigned agent via workflow command
 - 2026-04-17T01:02:28Z – Gemini – shell_pid=25640 – lane=for_review – Google Calendar Integration implemented. Backend includes service with caching and mock data fallback. Frontend includes CalendarView with React Query. Tests verified with mocking.
+- 2026-04-17T10:18:50Z – Gemini – shell_pid=32288 – lane=doing – Started review via workflow command
