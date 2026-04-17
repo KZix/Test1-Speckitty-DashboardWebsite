@@ -1,0 +1,11 @@
+.git
+.worktrees
+node_modules
+vendor
+dist
+.env
+.env.*
+!.env.docker
+.gemini
+.kittify
+.claudeignore

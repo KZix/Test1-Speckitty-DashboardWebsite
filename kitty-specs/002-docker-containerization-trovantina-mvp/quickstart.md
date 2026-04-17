@@ -19,10 +19,15 @@ docker-compose up -d
 | **Backend API** | [http://localhost:8000/api](http://localhost:8000/api) |
 | **Mailpit UI** | [http://localhost:8025](http://localhost:8025) |
 
-## 4. Verification
-1. Run `docker-compose ps` to ensure all services are `running`.
-2. Check backend logs: `docker-compose logs app`.
-3. Check frontend logs: `docker-compose logs web`.
+## 4. Common Commands
+
+| Action | Command |
+|--------|---------|
+| **Stop** | `docker-compose stop` |
+| **Start** | `docker-compose start` |
+| **Down (Reset)** | `docker-compose down` |
+| **Down (Clear Data)** | `docker-compose down -v` |
+| **View Logs** | `docker-compose logs -f` |
 
 ## 5. Backend Initial Setup
 Once the containers are up, initialize the Laravel environment:
@@ -36,3 +41,21 @@ The frontend should automatically install dependencies and start the dev server,
 ```bash
 docker-compose exec web npm install
 ```
+
+## 7. Running Tests
+You can run the full test suite directly inside the containers:
+
+**Backend Tests:**
+```bash
+docker-compose exec app php artisan test
+```
+
+**Frontend E2E Tests (Requires separate setup for UI tests):**
+```bash
+docker-compose exec web npx playwright test
+```
+
+## 8. Verification
+1. Run `docker-compose ps` to ensure all services are `running`.
+2. Check backend logs: `docker-compose logs app`.
+3. Check frontend logs: `docker-compose logs web`.

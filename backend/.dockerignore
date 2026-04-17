@@ -1,0 +1,10 @@
+vendor
+.env
+.env.*
+node_modules
+tests
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/testing/*
+storage/framework/views/*
+storage/logs/*
