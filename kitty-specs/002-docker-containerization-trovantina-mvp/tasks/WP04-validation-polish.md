@@ -1,7 +1,7 @@
 ---
 work_package_id: WP04
 title: Validation & Polish
-lane: "doing"
+lane: "for_review"
 dependencies:
 - WP02
 - WP03
@@ -62,3 +62,4 @@ This phase moves beyond implementation into validation and developer onboarding 
 ## Activity Log
 
 - 2026-04-17T20:10:05Z – Gemini – shell_pid=33712 – lane=doing – Assigned agent via workflow command
+- 2026-04-17T20:30:44Z – Gemini – shell_pid=33712 – lane=for_review – Validation & Polish implemented. Updated quickstart.md with Docker commands, added .dockerignore files, and verified data persistence.
