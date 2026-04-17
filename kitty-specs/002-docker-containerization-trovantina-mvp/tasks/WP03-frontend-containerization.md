@@ -11,6 +11,7 @@ subtasks: [T009, T010, T011, T012]
 requirement_refs:
 - FR-002
 shell_pid: "39604"
+agent: "Gemini"
 ---
 
 # Work Package: WP03 – Frontend Containerization (React/Vite)
@@ -63,3 +64,7 @@ The frontend requires Node 20 and must handle file system event issues commonly 
 ## Risks
 - **Node Modules Size**: Large anonymous volumes can consume disk space.
 - **HMR Latency**: Polling can slightly increase CPU usage during development.
+
+## Activity Log
+
+- 2026-04-17T19:55:13Z – Gemini – shell_pid=39604 – lane=doing – Assigned agent via workflow command
