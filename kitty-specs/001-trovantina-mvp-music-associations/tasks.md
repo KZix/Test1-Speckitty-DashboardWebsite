@@ -167,9 +167,9 @@
 **Requirements Refs**: FR-ATT-01, FR-ATT-02
 
 ### Included Subtasks
-- [ ] T023 Attendance API: Implement Mark Attendance endpoint (Admin only) in `backend/app/Http/Controllers/AttendanceController.php`
-- [ ] T024 [P] Attendance UI: Build Attendance Tracking interface for Admins in `frontend/src/features/attendance/AttendanceTracker.tsx`
-- [ ] T025 Attendance Integration: Link Attendance tracking with Calendar events in `frontend/src/features/attendance/EventAttendanceLink.tsx`
+- [x] T023 Attendance API: Implement Mark Attendance endpoint (Admin only) in `backend/app/Http/Controllers/AttendanceController.php`
+- [x] T024 [P] Attendance UI: Build Attendance Tracking interface for Admins in `frontend/src/features/attendance/AttendanceTracker.tsx`
+- [x] T025 Attendance Integration: Link Attendance tracking with Calendar events in `frontend/src/features/attendance/EventAttendanceLink.tsx`
 
 ### Implementation Notes
 - Attendance records must reference the Google Calendar Event ID.
