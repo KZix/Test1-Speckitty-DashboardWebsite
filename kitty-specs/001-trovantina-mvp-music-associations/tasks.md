@@ -45,10 +45,10 @@
 **Requirements Refs**: FR-AUTH-01, FR-AUTH-02
 
 ### Included Subtasks
-- [ ] T006 Backend Auth: Implement Register, Login, and User Profile endpoints in `backend/app/Http/Controllers/AuthController.php`
-- [ ] T007 Backend Auth Tests: 100% coverage for registration and login logic in `backend/tests/Feature/AuthTest.php`
-- [ ] T008 [P] Frontend Auth: Implement Login and Registration forms with Zod validation in `frontend/src/features/auth/`
-- [ ] T009 Frontend Auth: Implement Auth Context and Protected Routes in `frontend/src/context/AuthContext.tsx`
+- [x] T006 Backend Auth: Implement Register, Login, and User Profile endpoints in `backend/app/Http/Controllers/AuthController.php`
+- [x] T007 Backend Auth Tests: 100% coverage for registration and login logic in `backend/tests/Feature/AuthTest.php`
+- [x] T008 [P] Frontend Auth: Implement Login and Registration forms with Zod validation in `frontend/src/features/auth/`
+- [x] T009 Frontend Auth: Implement Auth Context and Protected Routes in `frontend/src/context/AuthContext.tsx`
 
 ### Implementation Notes
 - Use Laravel Sanctum for token-based authentication.
