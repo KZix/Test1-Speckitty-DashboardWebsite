@@ -11,6 +11,7 @@ subtasks: [T005, T006, T007, T008]
 requirement_refs:
 - FR-001
 shell_pid: "30468"
+agent: "Gemini"
 ---
 
 # Work Package: WP02 – Backend Containerization (Laravel)
@@ -65,3 +66,7 @@ The backend requires PHP 8.3 with specific extensions and automated startup task
 ## Risks
 - **PHP Extension Failures**: Alpine builds can be tricky with system dependencies (libpq-dev, etc.).
 - **Volume Permissions**: The container's web user needs write access to `storage` and `bootstrap/cache`.
+
+## Activity Log
+
+- 2026-04-17T17:54:56Z – Gemini – shell_pid=30468 – lane=doing – Assigned agent via workflow command
