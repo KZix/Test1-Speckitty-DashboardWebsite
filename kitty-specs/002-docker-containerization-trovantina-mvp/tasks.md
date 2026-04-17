@@ -48,10 +48,10 @@ This document outlines the phased implementation of the Docker orchestration set
 - **Depends on WP01**
 
 **Subtasks**:
-- [ ] T009: Create frontend/Dockerfile using Node 20.
-- [ ] T010: Configure vite.config.ts for Docker (polling and host binding).
-- [ ] T011: Add web service to docker-compose.yml with port 5173 exposed.
-- [ ] T012: Verify API communication between web and app containers.
+- [x] T009: Create frontend/Dockerfile using Node 20.
+- [x] T010: Configure vite.config.ts for Docker (polling and host binding).
+- [x] T011: Add web service to docker-compose.yml with port 5173 exposed.
+- [x] T012: Verify API communication between web and app containers.
 
 ---
 
