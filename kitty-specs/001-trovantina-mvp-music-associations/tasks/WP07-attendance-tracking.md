@@ -1,23 +1,27 @@
 ---
-work_package_id: "WP07"
+work_package_id: WP07
+title: Attendance Tracking
+lane: "doing"
+dependencies: []
+base_branch: main
+base_commit: 8135ea4f22373a45dbc16dc1b505e63060f1f967
+created_at: '2026-04-17T06:43:32.451329+00:00'
 subtasks:
-  - "T023"
-  - "T024"
-  - "T025"
-title: "Attendance Tracking"
-phase: "Phase 3 - Implementation"
-lane: "planned"
-assignee: ""
-agent: ""
-shell_pid: ""
-review_status: ""
-reviewed_by: ""
+- T023
+- T024
+- T025
+phase: Phase 3 - Implementation
+assignee: ''
+agent: ''
+shell_pid: "25224"
+review_status: ''
+reviewed_by: ''
 history:
-  - timestamp: "2026-04-16T16:40:06Z"
-    lane: "planned"
-    agent: "system"
-    shell_pid: ""
-    action: "Prompt generated via /spec-kitty.tasks"
+- timestamp: '2026-04-16T16:40:06Z'
+  lane: planned
+  agent: system
+  shell_pid: ''
+  action: Prompt generated via /spec-kitty.tasks
 ---
 
 # Work Package Prompt: WP07 – Attendance Tracking
