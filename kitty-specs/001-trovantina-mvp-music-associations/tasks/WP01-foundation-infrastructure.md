@@ -1,7 +1,7 @@
 ---
 work_package_id: WP01
 title: Foundation & Infrastructure
-lane: "doing"
+lane: "done"
 dependencies: []
 base_branch: main
 base_commit: ecac82b69307f60eff76c3482b96e9178f4ddb2f
@@ -16,8 +16,8 @@ phase: Phase 1 - Environment Setup
 assignee: ''
 agent: "Gemini"
 shell_pid: "26492"
-review_status: ''
-reviewed_by: ''
+review_status: "approved"
+reviewed_by: "Tiago Ramos"
 history:
 - timestamp: '2026-04-16T16:40:06Z'
   lane: planned
@@ -147,3 +147,4 @@ history:
 - 2026-04-16T17:33:55Z – Gemini – shell_pid=20760 – lane=doing – Assigned agent via workflow command
 - 2026-04-16T19:26:51Z – Gemini – shell_pid=20760 – lane=for_review – Foundation & Infrastructure implementation completed. Retrying move to for_review.
 - 2026-04-17T09:55:59Z – Gemini – shell_pid=26492 – lane=doing – Started review via workflow command
+- 2026-04-17T10:00:44Z – Gemini – shell_pid=26492 – lane=done – Review passed: Foundation and infrastructure are correctly set up. UUIDs implemented in migrations, Sanctum configured, and frontend shell initialized with Shadcn/Tailwind.
