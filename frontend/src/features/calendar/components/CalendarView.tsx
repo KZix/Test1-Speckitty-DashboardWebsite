@@ -1,21 +1,23 @@
 import { useQuery } from '@tanstack/react-query';
 import { getEvents } from '../api/getEvents';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar as CalendarIcon, Clock, MapPin, RefreshCw } from 'lucide-react';
+import { CalendarSkeleton } from './CalendarSkeleton';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Calendar as CalendarIcon, Clock, MapPin, RefreshCw, ClipboardCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/context/AuthContext';
+import { Link } from 'react-router-dom';
 
 export function CalendarView() {
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
+
   const { data: events, isLoading, isError, refetch, isRefetching } = useQuery({
     queryKey: ['calendar-events'],
     queryFn: getEvents,
   });
 
   if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    );
+    return <CalendarSkeleton />;
   }
 
   if (isError) {
@@ -51,20 +53,20 @@ export function CalendarView() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {events && events.length > 0 ? (
           events.map((event) => (
-            <Card key={event.id} className="overflow-hidden">
+            <Card key={event.id} className="flex flex-col overflow-hidden h-full">
               <CardHeader className="bg-primary/5 pb-3">
-                <CardTitle className="text-lg">{event.title}</CardTitle>
+                <CardTitle className="text-lg line-clamp-1">{event.title}</CardTitle>
                 <CardDescription className="flex items-center gap-1">
                   <CalendarIcon className="h-3.5 w-3.5" />
                   {new Date(event.start).toLocaleDateString(undefined, { 
-                    weekday: 'long', 
+                    weekday: 'short', 
                     year: 'numeric', 
-                    month: 'long', 
+                    month: 'short', 
                     day: 'numeric' 
                   })}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="pt-4 space-y-3">
+              <CardContent className="pt-4 space-y-3 flex-1">
                 <div className="flex items-center gap-2 text-sm">
                   <Clock className="h-4 w-4 text-muted-foreground" />
                   <span>
@@ -83,7 +85,7 @@ export function CalendarView() {
                 {event.location && (
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-muted-foreground" />
-                    <span>{event.location}</span>
+                    <span className="line-clamp-1">{event.location}</span>
                   </div>
                 )}
                 
@@ -93,6 +95,16 @@ export function CalendarView() {
                   </p>
                 )}
               </CardContent>
+              {isAdmin && (
+                <CardFooter className="pt-2 pb-4 px-6 border-t bg-muted/5">
+                  <Button asChild className="w-full" variant="outline" size="sm">
+                    <Link to={`/attendance?eventId=${event.id}&eventTitle=${encodeURIComponent(event.title)}`}>
+                      <ClipboardCheck className="mr-2 h-4 w-4" />
+                      Mark Attendance
+                    </Link>
+                  </Button>
+                </CardFooter>
+              )}
             </Card>
           ))
         ) : (
@@ -105,5 +117,3 @@ export function CalendarView() {
     </div>
   );
 }
-
-import { Loader2 } from 'lucide-react';

@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { useInstruments } from "../api/useInstruments";
 import { InventoryTable } from "../components/InventoryTable";
 import { InstrumentForm } from "../components/InstrumentForm";
+import { InventorySkeleton } from "../components/InventorySkeleton";
 import {
   Dialog,
   DialogContent,
@@ -144,9 +145,7 @@ export function InventoryPage() {
       </div>
 
       {isLoading ? (
-        <div className="h-64 flex items-center justify-center">
-          <RefreshCw className="h-8 w-8 animate-spin text-muted-foreground" />
-        </div>
+        <InventorySkeleton />
       ) : (
         <InventoryTable
           instruments={instruments}
