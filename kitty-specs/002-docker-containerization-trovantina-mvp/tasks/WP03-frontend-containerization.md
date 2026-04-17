@@ -1,12 +1,16 @@
 ---
 work_package_id: WP03
 title: Frontend Containerization (React/Vite)
-lane: planned
+lane: "doing"
 dependencies:
 - WP01
+base_branch: 002-docker-containerization-trovantina-mvp-WP01
+base_commit: 5922de92050fd3a47a1f4c6b229e8838f20c6981
+created_at: '2026-04-17T19:55:10.736972+00:00'
 subtasks: [T009, T010, T011, T012]
 requirement_refs:
 - FR-002
+shell_pid: "39604"
 ---
 
 # Work Package: WP03 – Frontend Containerization (React/Vite)
