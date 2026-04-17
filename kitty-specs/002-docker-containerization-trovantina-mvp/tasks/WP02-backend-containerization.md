@@ -1,12 +1,16 @@
 ---
 work_package_id: WP02
 title: Backend Containerization (Laravel)
-lane: planned
+lane: "doing"
 dependencies:
 - WP01
+base_branch: 002-docker-containerization-trovantina-mvp-WP01
+base_commit: 5922de92050fd3a47a1f4c6b229e8838f20c6981
+created_at: '2026-04-17T17:54:55.726459+00:00'
 subtasks: [T005, T006, T007, T008]
 requirement_refs:
 - FR-001
+shell_pid: "30468"
 ---
 
 # Work Package: WP02 – Backend Containerization (Laravel)
