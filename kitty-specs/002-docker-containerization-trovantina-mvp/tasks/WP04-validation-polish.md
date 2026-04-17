@@ -14,6 +14,7 @@ requirement_refs:
 - FR-002
 - FR-003
 shell_pid: "33712"
+agent: "Gemini"
 ---
 
 # Work Package: WP04 – Validation & Polish
@@ -57,3 +58,7 @@ This phase moves beyond implementation into validation and developer onboarding 
 
 ## Risks
 - **Documentation Drift**: Setup steps must match the final `docker-compose.yml` exactly.
+
+## Activity Log
+
+- 2026-04-17T20:10:05Z – Gemini – shell_pid=33712 – lane=doing – Assigned agent via workflow command
