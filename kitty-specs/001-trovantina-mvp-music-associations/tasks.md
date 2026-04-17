@@ -143,9 +143,9 @@
 **Requirements Refs**: FR-CAL-01, FR-CAL-02, FR-CAL-03
 
 ### Included Subtasks
-- [ ] T020 Calendar Backend: Configure Google API Service Account and proxy endpoint in `backend/app/Services/GoogleCalendarService.php`
-- [ ] T021 Calendar Backend: Implement caching for Google API responses to avoid rate limits
-- [ ] T022 [P] Calendar Frontend: Build read-only Calendar view component for the dashboard in `frontend/src/features/calendar/CalendarView.tsx`
+- [x] T020 Calendar Backend: Configure Google API Service Account and proxy endpoint in `backend/app/Services/GoogleCalendarService.php`
+- [x] T021 Calendar Backend: Implement caching for Google API responses to avoid rate limits
+- [x] T022 [P] Calendar Frontend: Build read-only Calendar view component for the dashboard in `frontend/src/features/calendar/CalendarView.tsx`
 
 ### Implementation Notes
 - Use a server-side proxy to keep the Google API Service Account credentials secure.
