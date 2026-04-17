@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: trovantina-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-trovantina}
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    networks:
+      - trovantina-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres} -d ${DB_DATABASE:-trovantina}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:alpine
+    container_name: trovantina-redis
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    networks:
+      - trovantina-network
+
+  mail:
+    image: axllent/mailpit
+    container_name: trovantina-mail
+    restart: unless-stopped
+    ports:
+      - "${MAIL_PORT_SMTP:-1025}:1025"
+      - "${MAIL_PORT_UI:-8025}:8025"
+    networks:
+      - trovantina-network
+
+networks:
+  trovantina-network:
+    driver: bridge
+
+volumes:
+  db_data:
+  redis_data:
