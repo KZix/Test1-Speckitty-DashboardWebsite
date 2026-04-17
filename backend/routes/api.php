@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\InstrumentController;
 
+use App\Http\Controllers\CalendarController;
+
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -14,6 +16,9 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user();
     });
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    // Calendar Routes
+    Route::get('/calendar/events', [CalendarController::class, 'index']);
 
     // Instrument Routes
     Route::get('/instruments', [InstrumentController::class, 'index']);
