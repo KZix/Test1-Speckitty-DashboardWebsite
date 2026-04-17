@@ -191,9 +191,9 @@
 **Requirements Refs**: SC-01, SC-02, SC-03, SC-04
 
 ### Included Subtasks
-- [ ] T026 E2E Testing: Implement Playwright/Cypress tests for critical user flows in `frontend/tests/e2e/`
-- [ ] T027 [P] Polish: Final UI/UX refinements, responsive checks, and error handling
-- [ ] T028 [P] Documentation: Update README, Quickstart, and verify all setup steps
+- [x] T026 E2E Testing: Implement Playwright/Cypress tests for critical user flows in `frontend/tests/e2e/`
+- [x] T027 [P] Polish: Final UI/UX refinements, responsive checks, and error handling
+- [x] T028 [P] Documentation: Update README, Quickstart, and verify all setup steps
 
 ### Implementation Notes
 - Focus on the "happy path" for the MVP release.
