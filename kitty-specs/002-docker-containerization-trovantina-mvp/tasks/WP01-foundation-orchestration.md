@@ -10,6 +10,7 @@ subtasks: [T001, T002, T003, T004]
 requirement_refs:
 - FR-003
 shell_pid: "34812"
+agent: "Gemini"
 ---
 
 # Work Package: WP01 – Foundation & Orchestration
@@ -64,3 +65,7 @@ This is the base of the entire containerized environment. All other application 
 ## Risks
 - **Port Conflicts**: Standard ports (5432, 6379) might be taken on the host.
 - **Permission Issues**: Docker volumes on some OS types can have strict permissions.
+
+## Activity Log
+
+- 2026-04-17T14:29:05Z – Gemini – shell_pid=34812 – lane=doing – Assigned agent via workflow command
