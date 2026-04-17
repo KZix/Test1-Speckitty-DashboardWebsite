@@ -65,6 +65,6 @@ This document outlines the phased implementation of the Docker orchestration set
 - **Depends on WP02, WP03**
 
 **Subtasks**:
-- [ ] T013: Update quickstart.md with final Docker commands.
-- [ ] T014: Verify data persistence after docker-compose down -v.
-- [ ] T015: Optimize Docker build layers and clean up untracked files.
+- [x] T013: Update quickstart.md with final Docker commands.
+- [x] T014: Verify data persistence after docker-compose down -v.
+- [x] T015: Optimize Docker build layers and clean up untracked files.
