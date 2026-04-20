@@ -1,7 +1,7 @@
 ---
 work_package_id: WP01
 title: Foundation & Orchestration
-lane: "for_review"
+lane: "doing"
 dependencies: []
 base_branch: main
 base_commit: c9e7112718565f5e6688f7ae04b8035a1bc9a5d6
@@ -9,8 +9,8 @@ created_at: '2026-04-17T14:29:04.799629+00:00'
 subtasks: [T001, T002, T003, T004]
 requirement_refs:
 - FR-003
-shell_pid: "34812"
-agent: "Gemini"
+shell_pid: "3188"
+agent: "gemini-cli"
 ---
 
 # Work Package: WP01 – Foundation & Orchestration
@@ -70,3 +70,4 @@ This is the base of the entire containerized environment. All other application 
 
 - 2026-04-17T14:29:05Z – Gemini – shell_pid=34812 – lane=doing – Assigned agent via workflow command
 - 2026-04-17T15:05:39Z – Gemini – shell_pid=34812 – lane=for_review – Foundation & Orchestration implemented. Created docker-compose.yml with DB, Redis, and Mailpit services. Added .env.docker template.
+- 2026-04-20T11:06:57Z – gemini-cli – shell_pid=3188 – lane=doing – Started review via workflow command
